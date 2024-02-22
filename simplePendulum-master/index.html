@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Simple Pendulam</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            h1 {
+                position: absolute;
+                top: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-family: sans-serif;
+                font-size: 40px;
+                text-transform: uppercase;
+            }
+            div {
+                position: absolute;
+                top: 40px;
+                left: 40px;
+            }
+
+            label {
+                font-size: 20px;
+
+            }
+
+            input {
+                outline: none;
+                width: 80px;
+            }
+
+            button {
+                display: block;
+                margin: 10 auto;
+                font-size: 20px;
+                width: 60%;
+                border-radius: 20px;
+                outline: none;
+            }
+            button:hover {
+                cursor: pointer;
+                background-color: lightgray;
+            }
+
+            p {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 40px;
+            }
+
+            div p {
+                position: absolute;
+                top: 300px;
+                font-size: 25px;
+                left: 100px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+           <label for="length">長度: </label>
+           <input id="length" type="number"/>
+            <br />
+           <label for="angleDeg">角度: </label>
+           <input id="angleDeg" type="number"/>
+           <br />
+           <label for="angleDeg">擺錘重: </label>
+           <input id="angleDeg" type="number"/>
+           <br />
+           <button id="go">開始模擬</button>
+           <button id="pause">暫停</button>
+           <button id="play">開始</button>
+
+           <p id="time">Time: <span id="timeSpan">00 : 00 . 000</span></p>
+        </div>
+
+        <p id="angle">角度: <span id="angleSpan">&nbsp;</span></p>
+        <canvas></canvas>
+        <script src="pendulam.js"></script>
+    </body>
+</html>
